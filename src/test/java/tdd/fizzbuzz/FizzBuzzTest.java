@@ -56,4 +56,15 @@ public class FizzBuzzTest {
 
         assertThat(answer).isEqualTo("FizzBuzz");
     }
+
+    @Test
+    @Parameters({"13", "23", "31", "33", "34"})
+    public void shouldReturnFizzWhenInputContainsThree(int input) {
+
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String answer = fizzBuzz.getAnswerFor(input);
+
+        assertThat(answer).isEqualTo("Fizz");
+    }
 }
