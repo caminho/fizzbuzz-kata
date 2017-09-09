@@ -58,7 +58,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    @Parameters({"13", "23", "31", "33", "34"})
+    @Parameters({"13", "23", "31", "33", "34", "36", "37", "39"})
     public void shouldReturnFizzWhenInputContainsThree(int input) {
 
         FizzBuzz fizzBuzz = new FizzBuzz();
@@ -66,5 +66,16 @@ public class FizzBuzzTest {
         String answer = fizzBuzz.getAnswerFor(input);
 
         assertThat(answer).isEqualTo("Fizz");
+    }
+
+    @Test
+    @Parameters({"50", "52", "55", "56", "58", "59"})
+    public void shouldReturnBuzzWhenInputContainsFive(int input) {
+
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String answer = fizzBuzz.getAnswerFor(input);
+
+        assertThat(answer).isEqualTo("Buzz");
     }
 }

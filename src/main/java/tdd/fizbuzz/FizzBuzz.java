@@ -9,10 +9,14 @@ public class FizzBuzz {
         if (containsThree(number) || isDivisibleByThree(number)) {
             return "Fizz";
         }
-        if (isDivisibleByFive(number)) {
+        if (containsFive(number) || isDivisibleByFive(number)) {
             return "Buzz";
         }
         return String.valueOf(number);
+    }
+
+    private boolean containsFive(int number) {
+        return containsDigit(number, 5);
     }
 
     private boolean containsThree(int number) {
