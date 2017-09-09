@@ -15,12 +15,45 @@ public class FizzBuzzTest {
 
     @Test
     @Parameters({"1", "2", "4", "7"})
-    public void shouldPrintNumber(int input) {
+    public void shouldReturnNumber(int input) {
 
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         String answer = fizzBuzz.getAnswerFor(input);
 
         assertThat(answer).isEqualTo(String.valueOf(input));
+    }
+
+    @Test
+    @Parameters({"3", "6", "9"})
+    public void shouldReturnFizz(int input) {
+
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String answer = fizzBuzz.getAnswerFor(input);
+
+        assertThat(answer).isEqualTo("Fizz");
+    }
+
+    @Test
+    @Parameters({"5", "10", "20", "25"})
+    public void shouldReturnBuzz(int input) {
+
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String answer = fizzBuzz.getAnswerFor(input);
+
+        assertThat(answer).isEqualTo("Buzz");
+    }
+
+    @Test
+    @Parameters({"15", "30", "45", "60", "75", "90"})
+    public void shouldReturnFizzBuzz(int input) {
+
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String answer = fizzBuzz.getAnswerFor(input);
+
+        assertThat(answer).isEqualTo("FizzBuzz");
     }
 }
